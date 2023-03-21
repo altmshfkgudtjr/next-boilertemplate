@@ -2,13 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 // head
 import GoogleTagManager from 'lib/head/GoogleTagManager';
-import {
-  QueryProvider,
-  RecoilProvider,
-  ThemeProvider,
-  ModalProvider,
-  SnackbarProvider,
-} from 'provider';
+import { QueryProvider, RecoilProvider, ThemeProvider } from 'provider';
 import { useUserIdTracking } from 'hook/event/useGoogleTagManager';
 // hooks
 import useMetaData from 'hook/commons/useMetaData';
@@ -54,9 +48,6 @@ const App = ({ Component, pageProps }: CustomAppProps) => {
             <GlobalStyles />
 
             {getLayout(<Component {...pageProps} />)}
-
-            <ModalProvider />
-            <SnackbarProvider />
           </ThemeProvider>
         </RecoilProvider>
       </QueryProvider>

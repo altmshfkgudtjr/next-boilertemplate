@@ -4,16 +4,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import 'jest-styled-components';
 
-beforeAll(() => {
-  window.fetch = jest.fn(() =>
-    Promise.resolve({
-      json: () => Promise.resolve({ name: '테스트 fetch 객체' }),
-      blob: () => new Blob(['테스트 Blob 객체']),
-    }),
-  );
-  window.URL.createObjectURL = jest.fn(file => file.name);
-});
-
 beforeEach(() => {
   Object.defineProperty(window, 'localStorage', {
     value: {
