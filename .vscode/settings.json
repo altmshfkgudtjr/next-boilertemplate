@@ -1,0 +1,64 @@
+{
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
+  "editor.inlineSuggest.enabled": true,
+
+  "java.compile.nullAnalysis.mode": "automatic",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "files.associations": {
+    ".env.development": "env",
+    ".env.production": "env",
+    ".env.local": "env",
+    "yarn.lock": "yarnlock"
+  },
+
+  "search.exclude": {
+    "**/.bundle": true,
+    "**/*.lock": true,
+    "**/build": true,
+    "**/Pods": true
+  },
+
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": false,
+    "typescriptreact": true,
+    "env": true,
+    "typescript": true,
+    "jsonc": true,
+    "json": true
+  }
+}

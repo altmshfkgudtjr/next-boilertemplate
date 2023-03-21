@@ -1,0 +1,30 @@
+name: Bug Report
+description: "\bfix 브랜치를 열기 위해 필요한 이슈 템플릿입니다."
+labels: ['Bugfix']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ 해결한 후에, 댓글을 통해서 방법을 남겨주시면 Best입니다!
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 해당 버그가 어떤 OS에서 발생되나요?
+      multiple: true
+      options:
+        - iOS
+        - Android
+  - type: input
+    id: device
+    attributes:
+      label: 해당 버그가 어떤 디바이스에서 발생되나요?
+      description: 예시) iPhone13 Pro, GalaxyZ Flip, Pixel7 Pro
+      placeholder: 디바이스 기종 작성 (Optional)
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 설명
+      description: 발생한 버그에 대해서 시나리오 및 사진 등으로 상세하게 알려주세요.
+      placeholder: 설명 작성
+    validations:
+      required: true
