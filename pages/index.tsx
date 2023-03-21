@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 // hooks
 import useMetaData from 'hook/commons/useMetaData';
-import useModal from 'hook/commons/useModal';
 import useSnackbar from 'hook/commons/useSnackbar';
 // types
 import type { SnackbarType } from 'store/system/snackbar';
@@ -10,26 +9,11 @@ import type { SnackbarType } from 'store/system/snackbar';
 const HomePage = () => {
   const { MetaTitle } = useMetaData();
   const { initSnackbar } = useSnackbar();
-  const { pushModal } = useModal();
 
   const onInitSnackbar = (type: SnackbarType) => {
     initSnackbar({
       type,
       message: 'Snackbar Test',
-    });
-  };
-
-  const onPushModal = () => {
-    pushModal({
-      name: 'Sample',
-      args: {
-        name: 'Modal Test',
-        message: 'This is Modal',
-      },
-      options: {
-        position: 'center',
-        isEnableCloseByBackground: true,
-      },
     });
   };
 
@@ -45,8 +29,6 @@ const HomePage = () => {
         <Button onClick={() => onInitSnackbar('Warning')}>스낵바 Warning 테스트</Button>
         <Button onClick={() => onInitSnackbar('Danger')}>스낵바 Ddanger 테스트</Button>
       </div>
-
-      <Button onClick={onPushModal}>모달 테스트</Button>
     </>
   );
 };
